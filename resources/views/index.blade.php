@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Blog</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Blog Name</h1>
+<x-app-layout>
+    <div class="content-base">
+        <h1 class="page-title">Blog 投稿一覧<h1>
         <div class='posts'>
-            <div class='post'>
                 @foreach($posts as $post)
-                <h2 class='title'>
-                    <a href="/show/{{ $post->id }}">
-                        {{ $post->title }}
-                    </a>
-                </h2>
-                <p class='body'>{{ $post->body }}</p>
-                <form action="/posts/{{ $post->id }}/delete" id="form_{{ $post->id }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
-                </form>
+                <div class='designed-post'>
+                    <h2 class='input-item'>
+                        <a href="/show/{{ $post->id }}">
+                            {{ $post->title }}
+                        </a>
+                    </h2>
+                    <p>{{ $post->body }}</p>
+                    <form action="/posts/{{ $post->id }}/delete" id="form_{{ $post->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" onclick="deletePost({{ $post->id }})">◀︎ delete</button> 
+                    </form>
+                </div>
               @endforeach
-            </div>
         </div>
-        <a href='/create'>create</a>
         <script>
             function deletePost(id) {
                 'use strict'
@@ -35,5 +27,5 @@
                 }
             }
         </script>
-    </body>
-</html>
+    </div>
+</x-app-layout>

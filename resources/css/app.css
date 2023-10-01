@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*以下は、本PJ用に追記した初期CSS*/
+
+.page-title {
+    /*各ページのタイトル*/
+    font-size: 20px;
+    color: rgb(51 65 85);
+    width: 50%;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.input-div {
+    /*inputを囲むdiv要素*/
+    padding-bottom: 20px;
+}
+
+.input-item {
+    /*input要素タイトル*/
+    font-weight: bold;
+    color: rgb(51 65 85);
+}
+
+textarea {
+    width:300px;
+    height:100px;   
+}
+
+.content-base {
+    /*各ページのメイン*/
+    padding: 30px 30px;
+}
+
+.post {
+    /*各投稿*/
+    padding-bottom: 3px;
+}
+
+.show-content {
+    margin-bottom:20px;
+}
+
+ /*サンプルデザイン後の各投稿
+ 参考サイト：https://saruwakakun.com/html-css/reference/box
+ */
+.designed-post {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background: white;
+    border-bottom: solid 6px #E6E6E6;
+    border-radius: 9px;
+}
+
+.designed-post p {
+    margin: 0; 
+    padding: 5px 0;
+}
