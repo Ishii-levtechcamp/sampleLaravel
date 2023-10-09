@@ -10,7 +10,7 @@
                         </a>
                     </h2>
                     <p>{{ $post->body }}</p>
-                    <form action="/posts/{{ $post->id }}/delete" id="form_{{ $post->id }}" method="post">
+                    <form action="{{route('delete',$post->id)}}" id="form_{{ $post->id }}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="button" onclick="deletePost({{ $post->id }})">◀︎ delete</button> 

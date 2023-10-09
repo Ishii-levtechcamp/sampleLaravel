@@ -38,7 +38,7 @@ class PostController extends Controller
     {
         $input = $request['post'];
         $post->fill($input)->save();
-        return redirect('/posts/' . $post->id);
+        return redirect()->route('show',$post->id);
     }
 
     /**
@@ -75,7 +75,7 @@ class PostController extends Controller
         $input_post = $request['post'];
         $post->fill($input_post)->save();
     
-        return redirect('/posts/' . $post->id);
+        return redirect()->route('show',$post->id);
     }
 
     /**

@@ -10,6 +10,6 @@
         <div class="footer">
             <a href="/">◀︎ 戻る</a>
         </div>
-        <a href="/posts/{{ $post->id }}/edit">◀︎ edit </a>
+        <a href="{{route('edit',$post->id)}}">◀︎ edit </a>
      </div>
 </x-app-layout>

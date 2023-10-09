@@ -31,7 +31,7 @@
                             transition ease-in-out 
                             duration-150"
                     >
-                    ○○選手
+                    {{ config('app.player_name') }}選手
                 </div>
             </div>
         </div>

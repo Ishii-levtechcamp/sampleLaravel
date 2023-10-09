@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="content-base">
         <h1 class="page-title">記事を作成しよう！</h1>
-        <form action="/posts" method="POST">
+        <form action="{{route('store')}}" method="POST">
             @csrf
             <div class="input-div">
                 <h2 class="input-item">タイトル</h2>

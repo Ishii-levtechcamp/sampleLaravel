@@ -211,5 +211,10 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+    
+    /**
+     * 選手の名前
+     */
+     'player_name' => "xxx",
 
 ];
